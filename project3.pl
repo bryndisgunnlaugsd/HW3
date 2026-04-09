@@ -40,7 +40,7 @@ borrowed(bob, touch).
 borrowed(carol, brave_new_world).
 borrowed(carol, touch).
 borrowed(tom, pride_and_prejudice).
-borrowed(tom, war_and_peace).
+borrowed(tom, independent_people).
 
 
 % RULES
