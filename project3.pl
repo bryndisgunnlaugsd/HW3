@@ -62,12 +62,15 @@ common_book(M1, M2, B) :-
     borrowed(M1, B),
     borrowed(M2, B).
 
-
-% TODO: Á EFTIR AÐ GERA
-
+% True if no member has borrowed book B (a rule)
 never_borrowed(B) :-
+    book_genre(B, _),
+    \+ borrowed(_, B).
 
+% True if L is a list of all members (without duplicates)
 member_list(L)
+    findall(M, member(M), All),
+    list_to_set(All, L).
 
 
 % ========================
